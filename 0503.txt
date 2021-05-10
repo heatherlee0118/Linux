@@ -1,0 +1,13 @@
+[root@localhost ~]# mkdir /opt/myself
+[root@localhost ~]# cd /opt/myself
+[root@localhost myself]# cp /etc/fstab /opt/myself
+[root@localhost myself]# mv fstab hellofs
+[root@localhost myself]# rm hellofs
+rm¡G¬O§_²¾°£´¶³qÀÉ®×'hellofs'? y
+[root@localhost myself]# cd ..
+[root@localhost opt]# rmdir myself
+
+cd > 回上一層
+mv > 移動資料位置
+rm > 刪除資料
+rmdir > 刪除目錄
