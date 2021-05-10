@@ -1,0 +1,22 @@
+[root@localhost ~]# groupadd sysadm
+[root@localhost ~]# useradd peter
+[root@localhost ~]# usermod -aG sysadm peter
+[root@localhost ~]# mkdir /opt/sysadm
+[root@localhost ~]# chgrp peter /opt/sysadm
+[root@localhost ~]# chmod g=srwx /opt/sysadm
+[root@localhost ~]# su - peter
+[peter@localhost ~]$ cd /opt/sysadm
+[peter@localhost sysadm]$ touch hello
+
+useradd  > 新增使用者(自動產生該使用者群組)
+groupadd > 新增群組(預設為空群組)
+usermod  > 更改使用者所屬群組
+mkdir    > 新增"目錄"
+rm       > 刪除"資料"
+rmdir    > 刪除"目錄"(aka資料夾)
+*touch*  > 新增資料
+su -     > 切換腳色
+userdel -r > 殺光peter全家
+
+chmod +(加入) -(減去) =(等於)
+u/擁有者  g/群組  o/其他  a/all
